@@ -4,7 +4,7 @@ public final class VideoComparator {
   private String title;
   private int numberOfFavorites;
 
-  public VideoComparator(String title, int numberOfFavorites) {
+  public VideoComparator(final String title, final int numberOfFavorites) {
     this.title = title;
     this.numberOfFavorites = numberOfFavorites;
   }
@@ -13,7 +13,7 @@ public final class VideoComparator {
     return title;
   }
 
-  public void setTitle(String title) {
+  public void setTitle(final String title) {
     this.title = title;
   }
 
@@ -21,7 +21,7 @@ public final class VideoComparator {
     return numberOfFavorites;
   }
 
-  public void setNumberOfFavorites(int numberOfFavorites) {
+  public void setNumberOfFavorites(final int numberOfFavorites) {
     this.numberOfFavorites = numberOfFavorites;
   }
 }

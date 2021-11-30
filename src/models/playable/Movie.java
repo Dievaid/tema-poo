@@ -7,25 +7,41 @@ public class Movie extends Video {
   private ArrayList<Double> ratings;
 
   public Movie(final String title, final int year,
-      final ArrayList<String> cast, final ArrayList<String> genres, int duration) {
+      final ArrayList<String> cast, final ArrayList<String> genres, final int duration) {
     super(title, year, cast, genres);
     this.duration = duration;
     this.ratings = new ArrayList<>();
   }
 
+  /**
+   *
+   * @return duration of the movie
+   */
   public int getDuration() {
     return duration;
   }
 
-  public void setDuration(int duration) {
+  /**
+   *
+   * @param duration duration to be modified with
+   */
+  public void setDuration(final int duration) {
     this.duration = duration;
   }
 
+  /**
+   *
+   * @return rating list
+   */
   public ArrayList<Double> getRatings() {
     return ratings;
   }
 
-  public void setRatings(ArrayList<Double> ratings) {
+  /**
+   *
+   * @param ratings to be modified
+   */
+  public void setRatings(final ArrayList<Double> ratings) {
     this.ratings = ratings;
   }
 

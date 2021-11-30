@@ -4,7 +4,7 @@ public final class GenreComparator {
   private String genre;
   private int popularity;
 
-  public GenreComparator(String genre, int popularity) {
+  public GenreComparator(final String genre, final int popularity) {
     this.genre = genre;
     this.popularity = popularity;
   }
@@ -13,7 +13,7 @@ public final class GenreComparator {
     return genre;
   }
 
-  public void setGenre(String genre) {
+  public void setGenre(final String genre) {
     this.genre = genre;
   }
 
@@ -21,7 +21,7 @@ public final class GenreComparator {
     return popularity;
   }
 
-  public void setPopularity(int popularity) {
+  public void setPopularity(final int popularity) {
     this.popularity = popularity;
   }
 }

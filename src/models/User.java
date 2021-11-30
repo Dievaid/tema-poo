@@ -20,43 +20,83 @@ public class User {
     this.rated = rated;
   }
 
+  /**
+   *
+   * @return username of the current instance
+   */
   public String getUsername() {
     return username;
   }
 
+  /**
+   *
+   * @return subscription type of the current instance
+   */
   public String getSubscription() {
     return subscription;
   }
 
+  /**
+   *
+   * @return history of the current user instance
+   */
   public Map<String, Integer> getHistory() {
     return history;
   }
 
+  /**
+   *
+   * @return favourite video titles of the current user instance
+   */
   public ArrayList<String> getFavorites() {
     return favorites;
   }
 
+  /**
+   *
+   * @return map of rated video titles
+   */
   public Map<String, Integer> getRated() {
     return rated;
   }
 
-  public void setUsername(String username) {
+  /**
+   *
+   * @param username modifies the username
+   */
+  public void setUsername(final String username) {
     this.username = username;
   }
 
-  public void setSubscription(String subscription) {
+  /**
+   *
+   * @param subscription modifies the subscription type
+   */
+  public void setSubscription(final String subscription) {
     this.subscription = subscription;
   }
 
-  public void setHistory(Map<String, Integer> history) {
+  /**
+   *
+   * @param history modifies the history of the user instance
+   */
+  public void setHistory(final Map<String, Integer> history) {
     this.history = history;
   }
 
-  public void setFavorites(ArrayList<String> favorites) {
+  /**
+   *
+   * @param favorites modifies the favourite list of the user
+   */
+  public void setFavorites(final ArrayList<String> favorites) {
     this.favorites = favorites;
   }
 
-  public void setRated(Map<String, Integer> rated) {
+  /**
+   *
+   * @param rated modifies the rated videos map
+   */
+  public void setRated(final Map<String, Integer> rated) {
     this.rated = rated;
   }
 }

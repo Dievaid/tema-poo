@@ -4,7 +4,7 @@ public final class UserComparator {
   private String username;
   private int numberOfFavourites;
 
-  public UserComparator(String username, int numberOfFavourites) {
+  public UserComparator(final String username, final int numberOfFavourites) {
     this.username = username;
     this.numberOfFavourites = numberOfFavourites;
   }
@@ -13,7 +13,7 @@ public final class UserComparator {
     return username;
   }
 
-  public void setUsername(String username) {
+  public void setUsername(final String username) {
     this.username = username;
   }
 
@@ -21,7 +21,7 @@ public final class UserComparator {
     return numberOfFavourites;
   }
 
-  public void setNumberOfFavourites(int numberOfFavourites) {
+  public void setNumberOfFavourites(final int numberOfFavourites) {
     this.numberOfFavourites = numberOfFavourites;
   }
 

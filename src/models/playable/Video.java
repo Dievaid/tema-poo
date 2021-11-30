@@ -16,35 +16,67 @@ public abstract class Video {
     this.genres = genres;
   }
 
+  /**
+   *
+   * @return title of current instance
+   */
   public String getTitle() {
     return title;
   }
 
-  public void setTitle(String title) {
+  /**
+   *
+   * @param title title to be changed
+   */
+  public void setTitle(final String title) {
     this.title = title;
   }
 
+  /**
+   *
+   * @return year of current instance
+   */
   public int getYear() {
     return year;
   }
 
-  public void setYear(int year) {
+  /**
+   *
+   * @param year to be changed with
+   */
+  public void setYear(final int year) {
     this.year = year;
   }
 
+  /**
+   *
+   * @return Cast array of current instance
+   */
   public ArrayList<String> getCast() {
     return cast;
   }
 
-  public void setCast(ArrayList<String> cast) {
+  /**
+   *
+   * @param cast list to be modified with
+   */
+  public void setCast(final ArrayList<String> cast) {
     this.cast = cast;
   }
 
+  /**
+   *
+   * @return Genre array current instance
+   */
   public ArrayList<String> getGenres() {
     return genres;
   }
 
-  public void setGenres(ArrayList<String> genres) {
+  /**
+   *
+   * @param genres list to be modified with
+   */
+  public void setGenres(final ArrayList<String> genres) {
     this.genres = genres;
   }
 

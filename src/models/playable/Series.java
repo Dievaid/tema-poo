@@ -14,19 +14,35 @@ public class Series extends Video {
     this.seasons = seasons;
   }
 
+  /**
+   *
+   * @return number of seasons of the series
+   */
   public int getNumberOfSeasons() {
     return numberOfSeasons;
   }
 
-  public void setNumberOfSeasons(int numberOfSeasons) {
+  /**
+   *
+   * @param numberOfSeasons number of seasons to modify
+   */
+  public void setNumberOfSeasons(final int numberOfSeasons) {
     this.numberOfSeasons = numberOfSeasons;
   }
 
+  /**
+   *
+   * @return gets the list of seasons
+   */
   public ArrayList<Season> getSeasons() {
     return seasons;
   }
 
-  public void setSeasons(ArrayList<Season> seasons) {
+  /**
+   *
+   * @param seasons to be modified with
+   */
+  public void setSeasons(final ArrayList<Season> seasons) {
     this.seasons = seasons;
   }
 

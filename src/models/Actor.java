@@ -24,7 +24,7 @@ public final class Actor {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(final String name) {
     this.name = name;
   }
 
@@ -32,7 +32,7 @@ public final class Actor {
     return careerDescription;
   }
 
-  public void setCareerDescription(String careerDescription) {
+  public void setCareerDescription(final String careerDescription) {
     this.careerDescription = careerDescription;
   }
 
@@ -40,7 +40,7 @@ public final class Actor {
     return filmography;
   }
 
-  public void setFilmography(ArrayList<String> filmography) {
+  public void setFilmography(final ArrayList<String> filmography) {
     this.filmography = filmography;
   }
 
@@ -48,7 +48,7 @@ public final class Actor {
     return awards;
   }
 
-  public void setAwards(Map<ActorsAwards, Integer> awards) {
+  public void setAwards(final Map<ActorsAwards, Integer> awards) {
     this.awards = awards;
   }
 
