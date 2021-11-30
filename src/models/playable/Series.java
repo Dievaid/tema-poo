@@ -2,11 +2,7 @@ package models.playable;
 
 import entertainment.Season;
 import java.util.ArrayList;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
 public class Series extends Video {
   private int numberOfSeasons;
   private ArrayList<Season> seasons;
@@ -15,6 +11,22 @@ public class Series extends Video {
       final ArrayList<String> genres, final int numberOfSeasons, final ArrayList<Season> seasons) {
     super(title, year, cast, genres);
     this.numberOfSeasons = numberOfSeasons;
+    this.seasons = seasons;
+  }
+
+  public int getNumberOfSeasons() {
+    return numberOfSeasons;
+  }
+
+  public void setNumberOfSeasons(int numberOfSeasons) {
+    this.numberOfSeasons = numberOfSeasons;
+  }
+
+  public ArrayList<Season> getSeasons() {
+    return seasons;
+  }
+
+  public void setSeasons(ArrayList<Season> seasons) {
     this.seasons = seasons;
   }
 

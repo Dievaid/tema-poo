@@ -1,11 +1,7 @@
 package models.playable;
 
 import java.util.ArrayList;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
 public class Movie extends Video {
   private int duration;
   private ArrayList<Double> ratings;
@@ -15,6 +11,22 @@ public class Movie extends Video {
     super(title, year, cast, genres);
     this.duration = duration;
     this.ratings = new ArrayList<>();
+  }
+
+  public int getDuration() {
+    return duration;
+  }
+
+  public void setDuration(int duration) {
+    this.duration = duration;
+  }
+
+  public ArrayList<Double> getRatings() {
+    return ratings;
+  }
+
+  public void setRatings(ArrayList<Double> ratings) {
+    this.ratings = ratings;
   }
 
   /**
