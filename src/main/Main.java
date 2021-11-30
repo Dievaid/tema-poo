@@ -6,6 +6,8 @@ import common.Constants;
 import fileio.Input;
 import fileio.InputLoader;
 import fileio.Writer;
+import functionalities.DataProcessor;
+import functionalities.Database;
 import org.json.simple.JSONArray;
 
 import java.io.File;
@@ -70,7 +72,8 @@ public final class Main {
         Writer fileWriter = new Writer(filePath2);
         JSONArray arrayResult = new JSONArray();
 
-        //TODO add here the entry point to your implementation
+        Database.getInstance().fetchData(input);
+        DataProcessor.execute(input, fileWriter, arrayResult);
 
         fileWriter.closeJSON(arrayResult);
     }
