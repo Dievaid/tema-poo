@@ -3,7 +3,8 @@ Student -> Capragiu David-Andrei, 324CA
 
 Organizarea codului:
 
-     Pentru evitarea codului de tip boiler plate, am folosit librăria lombok.
+     Pentru evitarea codului de tip boilerplate, am folosit librăria lombok.
+          -> Ulterior am creat un branch în care nu se mai folosește lombok datorită erorilor de pe vmchecker :)
 
      Pentru accesul la baza de date de oriunde la runtime, m-am gândit că cel mai bine ar fi să folosesc
 Singleton pattern. (clasa Database din pachetul "functionalities")
