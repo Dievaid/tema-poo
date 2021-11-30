@@ -1,38 +1,29 @@
-Object Oriented Programming Course
-Homework - VideosDB
+Temă -> Programare orientată pe obiecte
+Student -> Capragiu David-Andrei, 324CA
 
-November 2021
+Organizarea codului:
 
-# Info
-https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/tema
+     Pentru evitarea codului de tip boiler plate, am folosit librăria lombok.
 
-# About the code
+     Pentru accesul la baza de date de oriunde la runtime, m-am gândit că cel mai bine ar fi să folosesc
+Singleton pattern. (clasa Database din pachetul "functionalities")
 
-We provide the input tests, the logic that parses them and the checker that runs them.
+     Clasele au fost distribuite în pachete asociate unui scop specific:
+          - în pachetul "models" se găsesc entitățile Actor și User
+               -> "models" conține două subpachete, "comparator" în care am creat
+               niște clase utile pentru diferite sortări precum a unui videoclip 
+               după numărul de vizionări în care sunt plasate doar titlul ți numărul asociat de vizionări, și
+               "playable" unde se vor găsi clasa abstractă Video, și cele două clase care o moștenesc,
+               Movie și Series
+          
+          - în pachetul "functionalities" este implementată baza de date ca fiind un singleton,
+          DataProcessor care conține o metodă de executare a acțiunilor, o metodă utilă de sortare a
+          Map-urilor după valori și două metode pentru aplicare a filtrelor pentru videoclipuri și actori
+               -> în subpachetul "data" se va găsi clasa Data ce conține metode pentru încărcarea datelor din input
+               -> în subpachetul "tasks" sunt implementate cerințele în clase cu nume specifice :
+                    -> Command, Query, Recommend în care fiecare metodă implementată întoarce un json object ce conține
+                    id-ul acțiunii și un mesaj aferent tipului de acțiune
 
-* test_db - contains the tests in JSON format
-* src
-   * checker - the checker's sources including the checkstyle necessary files, not to be modified
-   * fileio - classes for parsing the input files, not to be modified
-   * common, utils
-        * contain utility classes with constants and static methods
-        * you can add your own functionality in the existing classes or add new classes as well
-   * actor
-        * contains an enum for the types of awards an actor can have - do not modify it
-        * you can add here your actor related classes
-   * entertainment
-        * contains an enum for the supported video genres - do not modify it
-        * class for representing a Season of a tv show - do not modify it
-        * you can add here your entertainment related classes
-
-We encourage you to organize your implementation in packages based on the functionality their classes offer. Try to keep
-your code modular, readable and documented.
-
-# Testing
-
-The Main class runs the checker on your implementation. Add the entry point to your implementation in it.
-
-Run Main to test your implementation from the IDE or from command line.
-
-Run the main method from Test class with the name of the input file from the command line and the result will be written
-to the out.txt file. Thus, you can compare this result with ref.
+          Clasele din functionalities conțin metode statice pentru lizibilitatea codului când sunt apelate
+     
+     Procesarea datelor se va face cu metoda "execute" din DataProcessor după copierea datelor în baza de date în clasa Main
