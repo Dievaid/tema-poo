@@ -5,14 +5,12 @@ import fileio.Input;
 import functionalities.data.Data;
 import java.util.ArrayList;
 import java.util.List;
-import lombok.Getter;
 import models.Actor;
 import models.User;
 import models.playable.Movie;
 import models.playable.Series;
 import models.playable.Video;
 
-@Getter
 public final class Database {
   private static final Database instance = new Database();
 
@@ -36,6 +34,102 @@ public final class Database {
       return new Database();
     }
     return instance;
+  }
+
+  /**
+   *
+   * @return gets the Action List
+   */
+  public List<ActionInputData> getActions() {
+    return actions;
+  }
+
+  /**
+   *
+   * @param actions modifies the action list
+   */
+  public void setActions(final List<ActionInputData> actions) {
+    this.actions = actions;
+  }
+
+  /**
+   *
+   * @return gets the actor list
+   */
+  public List<Actor> getActors() {
+    return actors;
+  }
+
+  /**
+   *
+   * @param actors list of actors to be modified with
+   */
+  public void setActors(final List<Actor> actors) {
+    this.actors = actors;
+  }
+
+  /**
+   *
+   * @return gets the user list
+   */
+  public List<User> getUsers() {
+    return users;
+  }
+
+  /**
+   *
+   * @param users list of users to be modified with
+   */
+  public void setUsers(final List<User> users) {
+    this.users = users;
+  }
+
+  /**
+   *
+   * @return gets a list with all videos
+   */
+  public List<Video> getVideos() {
+    return videos;
+  }
+
+  /**
+   *
+   * @param videos Video list to modify with
+   */
+  public void setVideos(final List<Video> videos) {
+    this.videos = videos;
+  }
+
+  /**
+   *
+   * @return gets a list of all movies
+   */
+  public List<Movie> getMovies() {
+    return movies;
+  }
+
+  /**
+   *
+   * @param movies list of movies to modify with
+   */
+  public void setMovies(final List<Movie> movies) {
+    this.movies = movies;
+  }
+
+  /**
+   *
+   * @return gets a list of all series
+   */
+  public List<Series> getSeries() {
+    return series;
+  }
+
+  /**
+   *
+   * @param series list of series to modify with
+   */
+  public void setSeries(final List<Series> series) {
+    this.series = series;
   }
 
   /**
